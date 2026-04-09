@@ -6702,6 +6702,22 @@
             margin-bottom: 0.3rem;
         }
 
+        .bi-form-row-files {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.3rem;
+            align-items: start;
+        }
+
+        .bi-form-row-files .bi-form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bi-form-row-files .bi-form-label-note {
+            min-height: 2.8rem;
+        }
+
         .bi-form-consent {
             display: flex;
             align-items: flex-start;
@@ -11776,7 +11792,7 @@ window.addEventListener('resize',drawHist);
                     <div class="bi-form-row">
                         <div class="bi-form-group">
                             <label>Ønsket investeringsbeløp *</label>
-                            <span class="bi-form-label-note">Minste tegningsbeløp er for tiden NOK 500.000. Se Betingelser på siden <a href="#slik-fungerer-det" style="color:var(--accent);">Hvordan virker det</a>.</span>
+                            <span class="bi-form-label-note">Minste tegningsbeløp er for tiden NOK 500.000.</span>
                             <input type="number" name="Investeringsbeløp" min="500000" value="0" required>
                         </div>
                         <div class="bi-form-group">
@@ -11785,16 +11801,16 @@ window.addEventListener('resize',drawHist);
                             <input type="text" name="Kontonummer" required>
                         </div>
                     </div>
-                    <div class="bi-form-row">
+                    <div class="bi-form-row-files">
                         <div class="bi-form-group">
                             <label>Kopi av legitimasjon *</label>
                             <span class="bi-form-label-note">Du kan bruke pass, førerkort eller bankkort med bilde som viser din fødselsdato.</span>
-                            <input type="file" name="Legitimasjon" accept="image/*,.pdf" required>
+                            <input type="file" name="Legitimasjon" accept="image/*,.pdf">
                         </div>
                         <div class="bi-form-group">
                             <label>Kopi av kontoutskrift *</label>
                             <span class="bi-form-label-note">Kontoutskriften må vise navn, gateadresse og det kontonummeret du har oppgitt over, men behøver ikke vise hvor mye du har på konto.</span>
-                            <input type="file" name="Kontoutskrift" accept="image/*,.pdf" required>
+                            <input type="file" name="Kontoutskrift" accept="image/*,.pdf">
                         </div>
                     </div>
 
@@ -12257,7 +12273,8 @@ window.addEventListener('resize',drawHist);
         </div>
     </section>
 
-    <!-- ═══ SCROLLING QUOTE TICKER ═══ -->
+    <!-- ═══ SCROLLING QUOTE TICKER (temporarily hidden — restore when testimonials are ready) ═══ -->
+    <!--
     <section class="er-ticker-section">
         <div class="er-ticker-track">
             <div class="er-ticker-item">&laquo;Renten kommer p&aring; konto hver m&aring;ned, akkurat som lovet.&raquo; <span class="er-ticker-dot"></span></div>
@@ -12266,7 +12283,6 @@ window.addEventListener('resize',drawHist);
             <div class="er-ticker-item">&laquo;God avkastning og god samvittighet.&raquo; <span class="er-ticker-dot"></span></div>
             <div class="er-ticker-item">&laquo;Anbefalt til b&aring;de venner og familie.&raquo; <span class="er-ticker-dot"></span></div>
             <div class="er-ticker-item">&laquo;Enkel prosess, ingen overraskelser.&raquo; <span class="er-ticker-dot"></span></div>
-            <!-- Duplicate for seamless loop -->
             <div class="er-ticker-item">&laquo;Renten kommer p&aring; konto hver m&aring;ned, akkurat som lovet.&raquo; <span class="er-ticker-dot"></span></div>
             <div class="er-ticker-item">&laquo;F&oslash;ler meg trygg p&aring; investeringen min.&raquo; <span class="er-ticker-dot"></span></div>
             <div class="er-ticker-item">&laquo;Profesjonelt og personlig fra dag &eacute;n.&raquo; <span class="er-ticker-dot"></span></div>
@@ -12275,6 +12291,7 @@ window.addEventListener('resize',drawHist);
             <div class="er-ticker-item">&laquo;Enkel prosess, ingen overraskelser.&raquo; <span class="er-ticker-dot"></span></div>
         </div>
     </section>
+    -->
 
     <!-- ═══ TESTIMONIAL CAROUSEL ═══ -->
     <section class="er-carousel-section">
