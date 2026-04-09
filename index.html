@@ -6637,6 +6637,71 @@
             min-height: 80px;
         }
 
+        .bi-form-group .bi-form-helper {
+            display: block;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 0.3rem;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .bi-form-group input[type="file"] {
+            padding: 0.6rem 1rem;
+            font-size: 0.82rem;
+            cursor: pointer;
+        }
+
+        .bi-form-group input[type="file"]::file-selector-button {
+            padding: 0.4rem 1rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 6px;
+            background: rgba(255,255,255,0.06);
+            color: rgba(255,255,255,0.6);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            cursor: pointer;
+            margin-right: 0.8rem;
+            transition: all 0.2s ease;
+        }
+
+        .bi-form-group input[type="file"]::file-selector-button:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--accent);
+        }
+
+        .bi-form-dob-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .bi-form-dob-row input {
+            width: 70px;
+            text-align: center;
+        }
+
+        .bi-form-dob-row input:last-of-type {
+            width: 100px;
+        }
+
+        .bi-form-dob-row .bi-dob-sep {
+            color: rgba(255,255,255,0.3);
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .bi-form-group .bi-form-label-note {
+            font-size: 0.68rem;
+            font-weight: 300;
+            text-transform: none;
+            letter-spacing: 0;
+            color: rgba(255,255,255,0.3);
+            display: block;
+            margin-top: 0.15rem;
+            margin-bottom: 0.3rem;
+        }
+
         .bi-form-consent {
             display: flex;
             align-items: flex-start;
@@ -11653,47 +11718,102 @@ window.addEventListener('resize',drawHist);
             <p class="bi-form-sub reveal">Fyll ut skjemaet under, så tar vi kontakt for å fullføre prosessen. Det tar bare noen minutter.</p>
 
             <div class="bi-form-container reveal">
-                <form class="bi-form" onsubmit="return false;">
+                <form class="bi-form" action="https://formsubmit.co/aksel@vitaeinvestments.no" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_subject" value="Ny investorsøknad fra nettsiden">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://aksel-vi.github.io/Vitae-Investments-Nettside/">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <p style="font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7;font-weight:300;margin-bottom:0.5rem;">Vi er glade for at du vurderer å investere hos Vitae Investments. Prosessen vår er designet for å være rask, enkel og problemfri, slik at du kan tilrettelegge din økonomiske fremtid uten unødvendige komplikasjoner.</p>
+
                     <div class="bi-form-row">
                         <div class="bi-form-group">
-                            <label>Fornavn</label>
-                            <input type="text" placeholder="Ditt fornavn">
+                            <label>Fornavn *</label>
+                            <input type="text" name="Fornavn" required>
                         </div>
                         <div class="bi-form-group">
-                            <label>Etternavn</label>
-                            <input type="text" placeholder="Ditt etternavn">
+                            <label>Etternavn *</label>
+                            <input type="text" name="Etternavn" required>
                         </div>
                     </div>
                     <div class="bi-form-row">
                         <div class="bi-form-group">
-                            <label>E-postadresse</label>
-                            <input type="email" placeholder="din@epost.no">
+                            <label>E-post *</label>
+                            <input type="email" name="E-post" required>
                         </div>
                         <div class="bi-form-group">
-                            <label>Telefonnummer</label>
-                            <input type="tel" placeholder="+47 000 00 000">
+                            <label>Mobil *</label>
+                            <input type="tel" name="Mobil" placeholder="+47" required>
                         </div>
                     </div>
-                    <div class="bi-form-group">
-                        <label>Ønsket investeringsbeløp</label>
-                        <select>
-                            <option value="" disabled selected>Velg beløp</option>
-                            <option value="100000-249000">100 000 – 249 000 NOK</option>
-                            <option value="250000-499000">250 000 – 499 000 NOK</option>
-                            <option value="500000-999000">500 000 – 999 000 NOK</option>
-                            <option value="1000000+">1 000 000 NOK eller mer</option>
-                        </select>
+                    <div class="bi-form-row">
+                        <div class="bi-form-group">
+                            <label>Gateadresse *</label>
+                            <input type="text" name="Gateadresse" required>
+                        </div>
+                        <div class="bi-form-group">
+                            <label>Postnummer *</label>
+                            <input type="text" name="Postnummer" required>
+                        </div>
                     </div>
-                    <div class="bi-form-group">
-                        <label>Eventuell melding (valgfritt)</label>
-                        <textarea placeholder="Skriv gjerne hva som er viktig for deg, eller om du har spørsmål."></textarea>
+                    <div class="bi-form-row">
+                        <div class="bi-form-group">
+                            <label>Poststed *</label>
+                            <input type="text" name="Poststed" required>
+                        </div>
+                        <div class="bi-form-group">
+                            <label>Fødselsdato *</label>
+                            <div class="bi-form-dob-row">
+                                <input type="text" name="Fødselsdag" placeholder="DD" maxlength="2" required>
+                                <span class="bi-dob-sep">.</span>
+                                <input type="text" name="Fødselsmåned" placeholder="MM" maxlength="2" required>
+                                <span class="bi-dob-sep">.</span>
+                                <input type="text" name="Fødselsår" placeholder="YYYY" maxlength="4" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bi-form-row">
+                        <div class="bi-form-group">
+                            <label>Ønsket investeringsbeløp *</label>
+                            <span class="bi-form-label-note">Minste tegningsbeløp er for tiden NOK 500.000. Se Betingelser på siden <a href="#slik-fungerer-det" style="color:var(--accent);">Hvordan virker det</a>.</span>
+                            <input type="number" name="Investeringsbeløp" min="500000" value="0" required>
+                        </div>
+                        <div class="bi-form-group">
+                            <label>Kontonummer for utbetalinger *</label>
+                            <span class="bi-form-label-note">Dette må være en norsk bankkonto som står registrert i ditt eget navn.</span>
+                            <input type="text" name="Kontonummer" required>
+                        </div>
+                    </div>
+                    <div class="bi-form-row">
+                        <div class="bi-form-group">
+                            <label>Kopi av legitimasjon *</label>
+                            <span class="bi-form-label-note">Du kan bruke pass, førerkort eller bankkort med bilde som viser din fødselsdato.</span>
+                            <input type="file" name="Legitimasjon" accept="image/*,.pdf" required>
+                        </div>
+                        <div class="bi-form-group">
+                            <label>Kopi av kontoutskrift *</label>
+                            <span class="bi-form-label-note">Kontoutskriften må vise navn, gateadresse og det kontonummeret du har oppgitt over, men behøver ikke vise hvor mye du har på konto.</span>
+                            <input type="file" name="Kontoutskrift" accept="image/*,.pdf" required>
+                        </div>
+                    </div>
+
+                    <div class="bi-form-consent">
+                        <input type="checkbox" required>
+                        <span>Jeg har gjort meg kjent med betingelsene for tegning av eiendomsobligasjoner, som finnes under fanen "Hvordan Virker Det" *</span>
                     </div>
                     <div class="bi-form-consent">
-                        <input type="checkbox">
-                        <span>Jeg samtykker til at Vitae Investments kontakter meg og behandler mine personopplysninger i tråd med <a href="https://vitaeinvestments.no/personvernerklaering/" target="_blank">personvernerklæringen</a>.</span>
+                        <input type="checkbox" required>
+                        <span>Jeg er kjent med at jeg på forespørsel må kunne dokumentere midlenes opprinnelser i tråd Hvitvaskingsloven. *</span>
                     </div>
-                    <button type="submit" class="bi-form-submit">Send søknad</button>
-                    <p class="bi-form-note">Vi tar kontakt innen 1–2 virkedager for å gå gjennom neste steg.</p>
+                    <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);font-weight:300;margin:-0.3rem 0 0.3rem;">Merk at selve innsendingen av dine opplysninger ikke utgjør noen forpliktelse eller bindende avtale.</p>
+                    <div class="bi-form-consent">
+                        <input type="checkbox" required>
+                        <span>Jeg bekrefter at opplysningene gitt ovenfor er korrekte. *</span>
+                    </div>
+
+                    <button type="submit" class="bi-form-submit">Send</button>
+                    <p class="bi-form-note">Merk at selve innsendingen av dine opplysninger ikke utgjør noen forpliktelse eller bindende avtale.</p>
                 </form>
             </div>
         </div>
