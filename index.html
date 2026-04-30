@@ -742,36 +742,22 @@
 
         /* ── HOME RISK NOTE ── */
         .home-risk-note {
-            max-width: 880px;
-            margin: 2.5rem auto 0;
-            padding: 1.1rem 1.6rem;
-            display: flex;
-            align-items: center;
-            gap: 0.9rem;
-            background: rgba(184, 152, 90, 0.06);
-            border: 1px solid rgba(184, 152, 90, 0.18);
-            border-radius: 10px;
-            color: #5d6168;
-        }
-        .home-risk-note svg {
-            width: 20px;
-            height: 20px;
-            color: var(--gold, #b8985a);
-            flex-shrink: 0;
-        }
-        .home-risk-note p {
-            margin: 0;
-            font-size: 0.88rem;
-            line-height: 1.55;
+            max-width: 720px;
+            margin: 2.2rem auto 0;
+            padding: 0 1.5rem;
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
             font-style: italic;
-            letter-spacing: 0.01em;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #8a8d92;
+            letter-spacing: 0.015em;
         }
         @media (max-width: 700px) {
             .home-risk-note {
-                margin: 2rem 1.2rem 0;
-                padding: 1rem 1.2rem;
+                margin: 1.8rem 1.2rem 0;
+                font-size: 0.92rem;
             }
-            .home-risk-note p { font-size: 0.82rem; }
         }
 
         /* ── SECTION: INTRO ── */
@@ -9390,14 +9376,7 @@
     <div class="trust-divider"></div>
 
     <!-- ═══ RISK NOTICE ═══ -->
-    <div class="home-risk-note reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-        <p>Investering i eiendomsobligasjoner innebærer risiko, og avkastning er ikke garantert. Vi oppfordrer alle til å sette seg grundig inn i investeringen før beslutning tas.</p>
-    </div>
+    <p class="home-risk-note reveal">Som med all investering medfører eiendomsobligasjoner risiko, og avkastning er ikke garantert. Vi oppfordrer alle til å sette seg grundig inn i investeringen.</p>
 
     <!-- ═══ INTRO ═══ -->
     <section class="intro" id="om">
