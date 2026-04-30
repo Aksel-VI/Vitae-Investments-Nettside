@@ -5970,6 +5970,106 @@
             z-index: 3;
         }
 
+        /* ── INFORMASJONSMEMORANDUM ── */
+        .sr-memorandum {
+            padding: 5rem 4rem;
+            background: linear-gradient(135deg, #f7f4ee 0%, #ebe5d9 100%);
+        }
+        .sr-memorandum-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .sr-memorandum-card {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: 0 30px 60px -30px rgba(0,0,0,0.15);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+        }
+        .sr-memorandum-content {
+            padding: 3.2rem;
+        }
+        .sr-memorandum-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: var(--deep);
+            margin: 0.6rem 0 1.2rem;
+            line-height: 1.15;
+        }
+        .sr-memorandum-content h2 em {
+            font-style: italic;
+            color: var(--gold, #b8985a);
+        }
+        .sr-memorandum-content p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1.6rem;
+        }
+        .sr-memorandum-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.2rem 0 0;
+        }
+        .sr-memorandum-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.55rem 0;
+            color: var(--deep);
+            font-size: 0.95rem;
+        }
+        .sr-memorandum-list svg {
+            width: 18px;
+            height: 18px;
+            color: var(--gold, #b8985a);
+            flex-shrink: 0;
+        }
+        .sr-memorandum-form {
+            background: var(--deep);
+            color: var(--white);
+            padding: 3.2rem;
+        }
+        .sr-memorandum-form h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            font-weight: 400;
+            margin: 0 0 0.5rem;
+        }
+        .sr-memorandum-form-sub {
+            opacity: 0.75;
+            margin-bottom: 1.5rem;
+            font-size: 0.92rem;
+        }
+        .sr-memorandum-form .sr-form-group label {
+            color: var(--white);
+        }
+        .sr-memorandum-form .sr-form-group input {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.18);
+            color: var(--white);
+        }
+        .sr-memorandum-form .sr-form-group input::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .sr-memorandum-form .sr-form-consent {
+            color: rgba(255,255,255,0.8);
+        }
+        .sr-memorandum-form .sr-form-consent a {
+            color: var(--white);
+            text-decoration: underline;
+        }
+        .sr-memorandum-form .sr-form-note {
+            color: rgba(255,255,255,0.6);
+        }
+        @media (max-width: 900px) {
+            .sr-memorandum { padding: 4rem 1.5rem; }
+            .sr-memorandum-card { grid-template-columns: 1fr; }
+            .sr-memorandum-content,
+            .sr-memorandum-form { padding: 2.2rem; }
+        }
+
         /* ── ARCHIVE ── */
         .sr-archive {
             padding: 5rem 4rem;
@@ -9213,38 +9313,8 @@
 <section class="hero">
         <div class="hero-grid"></div>
         <canvas class="hero-wave-canvas" id="heroWave"></canvas>
-            <!-- ═══ NEW OFFER TEASER ═══ -->
-            <a href="#" data-page="bliinvestor" class="offer-teaser">
-                <div class="offer-shimmer"></div>
-                <div class="offer-teaser-inner">
-                    <div class="offer-badge">
-                        <div class="offer-pulse"></div>
-                        <span class="offer-badge-text">Kommer snart</span>
-                    </div>
-                    <div class="offer-headline">Noe nytt er p&aring; vei &mdash; <em>12% fast rente</em> i hele perioden</div>
-                    <div class="offer-details">
-                        <div class="offer-stat">
-                            <div class="offer-stat-val">12%</div>
-                            <div class="offer-stat-label">Fast rente p.a.</div>
-                        </div>
-                        <div class="offer-divider"></div>
-                        <div class="offer-stat">
-                            <div class="offer-stat-val">36</div>
-                            <div class="offer-stat-label">M&aring;neders l&oslash;petid</div>
-                        </div>
-                        <div class="offer-divider"></div>
-                        <div class="offer-stat">
-                            <div class="offer-stat-val">Fast</div>
-                            <div class="offer-stat-label">Hele perioden</div>
-                        </div>
-                    </div>
-                    <div class="offer-cta">
-                        Registrer interesse
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-                    </div>
-                </div>
-            </a>
-        
+            <!-- Offer teaser removed -->
+
 
 
         <div class="hero-content">
@@ -10070,7 +10140,7 @@
                 </div>
                 <h3>Book et møte</h3>
                 <p>Ønsker du en uforpliktende samtale? Vi tar oss gjerne tid til å svare på spørsmål og forklare modellen.</p>
-                <a href="/cdn-cgi/l/email-protection#3d5c564e58517d4b54495c5854534b584e49505853494e135352">
+                <a href="#" data-page="kontakt" onclick="showPage('kontakt'); return false;">
                     Kontakt oss
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                 </a>
@@ -11541,6 +11611,60 @@ window.addEventListener('resize',drawHist);
         </div>
     </section>
 
+    <!-- ═══ INFORMASJONSMEMORANDUM ═══ -->
+    <section class="sr-memorandum" id="memorandum">
+        <div class="sr-memorandum-inner">
+            <div class="sr-memorandum-card reveal">
+                <div class="sr-memorandum-content">
+                    <div class="intro-label">Detaljert dokumentasjon</div>
+                    <h2>Informasjons<em>memorandum</em></h2>
+                    <p>Vårt informasjonsmemorandum gir en grundig presentasjon av investeringsmuligheten — vilkår, struktur, risiko og avkastning. Dokumentet er forbeholdt seriøst interesserte investorer og sendes på forespørsel.</p>
+                    <ul class="sr-memorandum-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Detaljerte investeringsvilkår</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Risikoanalyse og sikkerhet</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Juridisk og finansiell struktur</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Komplett prosjektoversikt</li>
+                    </ul>
+                </div>
+                <div class="sr-memorandum-form">
+                    <h3>Bestill informasjonsmemorandum</h3>
+                    <p class="sr-memorandum-form-sub">Fyll ut skjemaet nedenfor, så sender vi dokumentet på e-post.</p>
+                    <form class="sr-form" action="https://formsubmit.co/aksel@vitaeinvestments.no" method="POST">
+                        <input type="hidden" name="_subject" value="Bestilling av informasjonsmemorandum">
+                        <input type="hidden" name="_captcha" value="true">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://vitaeinvestments.no">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="sr-form-row">
+                            <div class="sr-form-group">
+                                <label>Fornavn</label>
+                                <input type="text" name="Fornavn" placeholder="Ditt fornavn" required>
+                            </div>
+                            <div class="sr-form-group">
+                                <label>Etternavn</label>
+                                <input type="text" name="Etternavn" placeholder="Ditt etternavn" required>
+                            </div>
+                        </div>
+                        <div class="sr-form-group">
+                            <label>E-postadresse</label>
+                            <input type="email" name="E-post" placeholder="din@epost.no" required>
+                        </div>
+                        <div class="sr-form-group">
+                            <label>Telefonnummer</label>
+                            <input type="tel" name="Telefon" placeholder="+47 000 00 000" required>
+                        </div>
+                        <div class="sr-form-consent">
+                            <input type="checkbox" name="Samtykke" value="ja" required>
+                            <span>Jeg samtykker til å motta informasjonsmemorandum og annen relevant informasjon fra Vitae Investments, og til behandling av mine personopplysninger i tråd med <a href="https://vitaeinvestments.no/personvernerklaering/" target="_blank">personvernerklæringen</a>.</span>
+                        </div>
+                        <button type="submit" class="sr-form-submit">Bestill informasjonsmemorandum</button>
+                        <p class="sr-form-note">Vi behandler din henvendelse innen 1–2 virkedager.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ═══ ARCHIVE ═══ -->
     <section class="sr-archive">
         <div class="sr-archive-inner">
@@ -12074,9 +12198,9 @@ window.addEventListener('resize',drawHist);
                     </div>
                     <div class="ko-form-perk">
                         <div class="ko-form-perk-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
                         </div>
-                        Helt uforpliktende &mdash; ingen bindingstid
+                        Vi svarer innen 24 timer
                     </div>
                 </div>
             </div>
