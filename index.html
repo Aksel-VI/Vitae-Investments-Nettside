@@ -9309,14 +9309,17 @@
                 <a href="#" data-page="home">Hjem</a>
                 <a href="#" data-page="utforsk">Utforsk</a>
                 <a href="#" data-page="omoss">Om oss</a>
+                <!-- AVVIK 1: Impact Partner-lenke skjult. Reaktiveres ved å fjerne kommentar-taggene.
                 <a href="#" data-page="impact">Impact Partner</a>
+                -->
                 <a href="#" data-page="erfaringer">Erfaringer</a>
                 <a href="#" data-page="rapporter">Rapporter &amp; Artikler</a>
                 <a href="#" data-page="kontakt">Kontakt oss</a>
             </div>
             <div class="nav-actions">
                 <a href="#investorportal" class="nav-portal">Investorportal</a>
-                <a href="#" data-page="bliinvestor" class="nav-cta">Bli investor</a>
+                <!-- AVVIK 1: Bli investor-CTA fjernet fra nav. -->
+                <a href="#" data-page="kontakt" class="nav-cta">Kontakt oss</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Meny">
                 <span></span>
@@ -9339,16 +9342,22 @@
 
         <div class="hero-content">
             <div class="hero-inner">
-                <h1>Forutsigbar avkastning<br>med <em>mening</em></h1>
+                <h1>Trygge hjem<br>med <em>mening</em></h1>
+                <!-- AVVIK 1: Original hero-tekst nedenfor. Ny tekst uten aktiv investeringsoppfordring.
                 <p class="hero-sub">
                     Invester i eiendomsobligasjoner og motta opptil 10% fast rente med månedlige utbetalinger — mens kapitalen din skaper trygge hjem for mennesker som trenger det mest.
                 </p>
+                -->
+                <p class="hero-sub">
+                    Vitae Investments eier og utvikler boliger for vanskeligstilte i Storbritannia. Bli bedre kjent med selskapet og hva vi jobber for.
+                </p>
                 <div class="hero-buttons">
-                    <a href="#" data-page="bliinvestor" class="btn-primary">
-                        Bli investor
+                    <!-- AVVIK 1: Bli investor-CTA fjernet. -->
+                    <a href="#om" class="btn-primary">
+                        Les mer om oss
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                     </a>
-                    <a href="#om" class="btn-ghost">Les mer om investeringen</a>
+                    <a href="#" data-page="kontakt" onclick="showPage('kontakt'); return false;" class="btn-ghost">Kontakt oss</a>
                 </div>
             </div>
         </div>
@@ -9356,7 +9365,8 @@
 
 
 
-        <!-- ═══ TRUST BAR ═══ -->
+        <!-- AVVIK 1: Trust bar med spesifikke rentevilkår deaktivert. Bevart i <template>. -->
+    <template id="trustBarDisabled">
     <section class="trust-bar reveal">
         <div class="trust-items" style="grid-template-columns: repeat(3, 1fr);">
             <div class="trust-item">
@@ -9373,6 +9383,8 @@
             </div>
         </div>
     </section>
+    </template>
+    <!-- END AVVIK 1: Trust bar slutter her. -->
     <div class="trust-divider"></div>
 
     <!-- ═══ RISK NOTICE ═══ -->
@@ -9389,11 +9401,13 @@
                 <p>
                     Vitae Investments eier og utvikler boliger for vanskeligstilte i Storbritannia — hjemløse, lavinntektsfamilier og personer med særskilte behov. Etter ferdigstillelse leies eiendommene ut til offentlige myndigheter. Leieinntektene er langsiktige og sikre gjennom kommunale kontrakter.
                 </p>
+                <!-- AVVIK 1: Original tekst med aktive rentesatser nedenfor. Bevart i kommentar.
                 <p>
                     Din investering gir deg fast avkastning på 10% det første året og 8% det andre — utbetalt månedlig, direkte til din konto. Etter 24 måneder tilbakebetales hele beløpet.
                 </p>
+                -->
                 <p>
-                    Det som gjør oss unike er at inntektene stammer fra kontraktfestede leieavtaler med britiske kommuner. I motsetning til andre eiendomsaktører er vi ikke avhengige av å selge eiendommer for å tilbakebetale investorer.
+                    Det som gjør oss unike er at inntektene stammer fra kontraktfestede leieavtaler med britiske kommuner. I motsetning til andre eiendomsaktører er vi ikke avhengige av å selge eiendommer for å drive virksomheten videre.
                 </p>
             </div>
         </div>
@@ -9401,7 +9415,8 @@
 
     <div class="trust-divider"></div>
 
-    <!-- ═══ CHALLENGE QUOTE ═══ -->
+    <!-- AVVIK 1: Challenge quote med aktive rentesatser deaktivert. Bevart i <template>. -->
+    <template id="challengeQuoteDisabled">
     <section style="padding:3rem 4rem 4rem;max-width:900px;margin:0 auto;text-align:center;">
         <div class="reveal">
             <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:300;font-style:italic;color:var(--deep);line-height:1.5;">Finner du en annen investering som gir opptil <span style="color:var(--accent);font-weight:400;">10% årlig avkastning</span>, månedlige utbetalinger og samtidig hjelper mennesker som trenger det mest?</p>
@@ -9409,8 +9424,11 @@
     </section>
 
     <div class="trust-divider"></div>
+    </template>
+    <!-- END AVVIK 1: Challenge quote slutter her. -->
 
-    <!-- ═══ HVEM PASSER DETTE FOR ═══ -->
+    <!-- AVVIK 1: "Hvem passer dette for" (investor-rekruttering) deaktivert. Bevart i <template>. -->
+    <template id="audienceDisabled">
     <section class="audience">
         <div class="audience-header reveal">
             <div class="intro-label">Er dette noe for deg?</div>
@@ -9451,8 +9469,11 @@
             </div>
         </div>
     </section>
+    </template>
+    <!-- END AVVIK 1: "Hvem passer dette for" slutter her. -->
 
-    <!-- ═══ HOW IT WORKS ═══ -->
+    <!-- AVVIK 1: "Slik fungerer det" (investorreise) deaktivert. Bevart i <template>. -->
+    <template id="howItWorksDisabled">
     <section class="how-it-works" id="slik-fungerer-det">
         <div class="how-inner">
             <div class="how-header reveal">
@@ -9483,8 +9504,11 @@
             </div>
         </div>
     </section>
+    </template>
+    <!-- END AVVIK 1: "Slik fungerer det" slutter her. -->
 
-    <!-- ═══ JOURNEY (scroll-animated) ═══ -->
+    <!-- AVVIK 1: "Investeringens reise" (journey) deaktivert. Bevart i <template>. -->
+    <template id="journeyDisabled">
     <section class="journey" id="reisen">
         <div class="journey-header reveal">
             <div class="intro-label">Følg kronene dine</div>
@@ -9621,6 +9645,8 @@
             </div>
         </div>
     </section>
+    </template>
+    <!-- END AVVIK 1: "Investeringens reise" slutter her. -->
 
     <!-- ═══ VITAE NØKKELTALL ═══ -->
     <section class="vm-ribbon" id="vitaeMetrics">
@@ -9646,7 +9672,9 @@
         <span class="vm-rule-btm"></span>
     </section>
 
-    <!-- ═══ CALCULATOR ═══ -->
+    <!-- AVVIK 1: Investeringskalkulator er deaktivert. Innholdet er bevart inne i <template>-taggen nedenfor.
+         For å reaktivere: fjern <template>-åpningen under og </template>-lukkingen rett før <!-- BENEFITS -->. -->
+    <template id="calculatorDisabled">
     <section class="calculator" id="kalkulator">
         <div class="calculator-header reveal">
             <div class="intro-label">Investeringskalkulator</div>
@@ -9672,7 +9700,8 @@
             </div>
         </div>
     </section>
-    <div class="calc-divider"></div>
+    </template>
+    <!-- END AVVIK 1: Investeringskalkulator slutter her. -->
 
     <!-- ═══ BENEFITS ═══ -->
     <section class="benefits">
@@ -9742,11 +9771,20 @@
                                 <p>Juridisk bindende gjennom obligasjonsavtalen — uavhengig av markedssvingninger.</p>
                             </div>
                         </div>
+                        <!-- AVVIK 3: Original blokk nedenfor. Ny formulering uten pant-påstand.
                         <div class="shield-item" data-ring="1">
                             <div class="shield-item-marker"><div class="shield-item-dot"></div></div>
                             <div class="shield-item-text">
                                 <h3>Pant i aksjer</h3>
                                 <p>Investorer har pant i aksjene i Vitae Investments AS, som eier driftsselskapet og eiendommene.</p>
+                            </div>
+                        </div>
+                        -->
+                        <div class="shield-item" data-ring="1">
+                            <div class="shield-item-marker"><div class="shield-item-dot"></div></div>
+                            <div class="shield-item-text">
+                                <h3>Reell eiendomsverdi</h3>
+                                <p>Kapitalen investeres i konkrete eiendommer i Storbritannia som utgjør selskapets underliggende verdier.</p>
                             </div>
                         </div>
                         <div class="shield-item" data-ring="2">
@@ -9766,6 +9804,8 @@
                     </div>
                 </div>
 
+                <!-- AVVIK 1: Struktur-diagram (Investor → Norge AS → UK Ltd → Eiendommer) deaktivert. Bevart i <template>. -->
+                <template id="sfStructureDisabled">
                 <div class="sf-divider reveal">
                     <div class="sf-divider-line"></div>
                 </div>
@@ -9810,6 +9850,8 @@
                         </div>
                     </div>
                 </div>
+                </template>
+                <!-- END AVVIK 1: Struktur-diagram slutter her. -->
             </div>
         </div>
     </section>
@@ -10074,8 +10116,9 @@
                 <div class="book-page back-page" data-page="16">
                     <div class="book-back-inner">
                         <div class="back-logo"><img src="vitae-logo.jpg" alt="" style="height:40px;border-radius:50%;margin-bottom:0.6rem;display:block;margin-left:auto;margin-right:auto;">VITAE <span>·</span> INVESTMENTS</div>
-                        <div class="back-cta">Klar til å sette kapitalen din i arbeid?</div>
-                        <a href="#" data-page="bliinvestor" class="back-btn">Bli investor →</a>
+                        <div class="back-cta">Vil du vite mer om vår modell?</div>
+                        <!-- AVVIK 1: Bli investor-CTA fjernet. -->
+                        <a href="#" data-page="kontakt" class="back-btn">Kontakt oss →</a>
                         <div class="back-contact">vitaeinvestments.no · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4c3c233f380c3a25382d2925223a293f38212922383f622223">[email&#160;protected]</a></div>
                     </div>
                 </div>
@@ -10099,7 +10142,10 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card reveal">
                     <div class="testimonial-quote">"</div>
+                    <!-- AVVIK 7: Original tekst nedenfor. Ny tekst uten "garantert rente"-formulering.
                     <blockquote>Den garanterte renten gjorde at jeg turte å satse. Utbetalingene hver måned gir meg en kjærkommen ekstra inntekt, og investeringene i bolig for hjemløse er etter mitt hjerte.</blockquote>
+                    -->
+                    <blockquote>Den forutsigbare avkastningen gjorde at jeg turte å satse. Utbetalingene hver måned gir meg en kjærkommen ekstra inntekt, og investeringene i bolig for hjemløse er etter mitt hjerte.</blockquote>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar"><img src="Åse.png" alt="Åse H."></div>
                         <div>
@@ -10134,14 +10180,14 @@
         </div>
     </section>
 
-    <!-- ═══ CTA / BLI INVESTOR ═══ -->
+    <!-- AVVIK 1: CTA-seksjon endret — "Start investering"-kortet fjernet, "Klar til å investere?"-overskrift dempet. -->
     <section class="cta-section" id="bli-investor-home">
         <div class="cta-header reveal">
-            <div class="intro-label">Kom i gang</div>
-            <h2>Klar til å investere?</h2>
-            <p>Velg den veien som passer deg best — uansett om du vil lese mer, snakke med oss, eller starte med en gang.</p>
+            <div class="intro-label">Bli bedre kjent med oss</div>
+            <h2>Ønsker du mer informasjon?</h2>
+            <p>Velg den veien som passer deg best — enten du vil lese mer om oss eller snakke direkte med teamet.</p>
         </div>
-        <div class="cta-cards">
+        <div class="cta-cards" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto;">
             <div class="cta-card reveal">
                 <div class="cta-card-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -10161,32 +10207,30 @@
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                 </div>
-                <h3>Book et møte</h3>
+                <h3>Ta kontakt</h3>
                 <p>Ønsker du en uforpliktende samtale? Vi tar oss gjerne tid til å svare på spørsmål og forklare modellen.</p>
                 <a href="#" data-page="kontakt" onclick="showPage('kontakt'); return false;">
                     Kontakt oss
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                 </a>
             </div>
-            <div class="cta-card reveal">
-                <div class="cta-card-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
-                    </svg>
-                </div>
-                <h3>Start investering</h3>
-                <p>Klar til å begynne? Ta kontakt for å motta avtale og komme i gang med din investering allerede i dag.</p>
-                <a href="#" data-page="bliinvestor">
-                    Bli investor nå
-                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-                </a>
-            </div>
         </div>
     </section>
+    <!-- AVVIK 1: Original CTA-seksjon (med "Start investering") bevart nedenfor.
+    <section class="cta-section">
+        <div class="cta-header reveal">
+            <div class="intro-label">Kom i gang</div>
+            <h2>Klar til å investere?</h2>
+            <p>Velg den veien som passer deg best — uansett om du vil lese mer, snakke med oss, eller starte med en gang.</p>
+        </div>
+        [3 CTA-kort med Bli investor nå — fjernet iht avviksliste]
+    </section>
+    -->
 
     <!-- ═══ DISCLAIMER ═══ -->
+    <!-- AVVIK 9: Innskuddsgaranti-disclosure lagt til. -->
     <div class="disclaimer reveal" style="max-width:800px;margin:0 auto;padding:0 4rem 3rem;">
-        <p><strong>Viktig informasjon:</strong> Investering i eiendomsobligasjoner innebærer risiko. Du kan tape hele eller deler av investert beløp. Historisk avkastning er ingen garanti for fremtidig avkastning. Vi anbefaler alle å sette seg grundig inn i relevante forretningsmodeller før investering.</p>
+        <p><strong>Viktig informasjon:</strong> Investering i eiendomsobligasjoner innebærer risiko. Du kan tape hele eller deler av investert beløp. Historisk avkastning er ingen garanti for fremtidig avkastning. Vi anbefaler alle å sette seg grundig inn i relevante forretningsmodeller før investering. Vitae Investments er ikke tilknyttet Bankenes Sikringsfond, og investeringen er ikke omfattet av innskuddsgarantien.</p>
     </div>
 
     </div>
@@ -10636,11 +10680,15 @@
                         <h3>Hva skjer med pengene mine dersom selskapet går konkurs?</h3>
                         <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
                     </div>
+                    <!-- AVVIK 2 & 3: Original tekst nedenfor. Ny tekst uten pant-/selskapsgaranti-påstander.
                     <div class="faq-answer"><div class="faq-answer-inner">Investorer har pant i aksjene i det norske selskapet Vitae Investments Norge AS. I et verst tenkelig scenario vil eiendommene realiseres og investorene får utbetalt før aksjonærene. I tillegg har Vitae Investments en selskapsgaranti som gir et ekstra lag med sikkerhet.</div></div>
+                    -->
+                    <div class="faq-answer"><div class="faq-answer-inner">Ved en eventuell konkurs vil verdiene i selskapet realiseres etter gjeldende konkursrettslige regler, og eventuell utbetaling til obligasjonseierne vil avhenge av selskapets samlede eiendeler og forpliktelser på det aktuelle tidspunktet. Investering i eiendomsobligasjoner innebærer risiko, og hele eller deler av investert beløp kan gå tapt.</div></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Hvordan kan dere garantere 10% rente?</h3>
+                        <!-- AVVIK 7: Original overskrift "Hvordan kan dere garantere 10% rente?" endret. -->
+                        <h3>Hvordan er avkastningen fastsatt?</h3>
                         <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
                     </div>
                     <div class="faq-answer"><div class="faq-answer-inner">Avkastningen er mulig fordi eiendommene leies ut på langsiktige kommunale kontrakter med forutsigbare inntekter, kombinert med verdiøkning på eiendommene over tid. Renten er kontraktsfestet i obligasjonsavtalen mellom investor og selskapet.</div></div>
@@ -10657,7 +10705,10 @@
                         <h3>Er dere regulert av Finanstilsynet?</h3>
                         <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
                     </div>
+                    <!-- AVVIK 8: Original tekst nedenfor. Ny tekst uten spesifikk PwC-referanse.
                     <div class="faq-answer"><div class="faq-answer-inner">Vitae Investments tilbyr obligasjoner som ikke krever konsesjon fra Finanstilsynet, men vi har gjennomført en compliance-vurdering med PwC for å sikre at vi opererer innenfor regelverket. All dokumentasjon er tilgjengelig for investorer.</div></div>
+                    -->
+                    <div class="faq-answer"><div class="faq-answer-inner">Vitae Investments tilbyr obligasjoner som etter vår vurdering ikke er konsesjonspliktige etter finansforetaksloven. Selskapet er revisjonspliktig, og relevant dokumentasjon gjøres tilgjengelig for investorer på forespørsel. Vi presiserer at investeringen ikke er omfattet av innskuddsgarantien (Bankenes Sikringsfond).</div></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
@@ -10678,7 +10729,10 @@
                         <h3>Hva brukes kapitalen til?</h3>
                         <div class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
                     </div>
+                    <!-- AVVIK 4: Original tekst nedenfor. Ny tekst uten "aldri til drift/lønninger"-påstand.
                     <div class="faq-answer"><div class="faq-answer-inner">Kapitalen brukes utelukkende til å kjøpe og renovere nye eiendommer for sosiale boligprosjekter. Vi bruker aldri investorkapital til løpende drift eller lønninger.</div></div>
+                    -->
+                    <div class="faq-answer"><div class="faq-answer-inner">Innhentet kapital benyttes til finansiering av selskapets virksomhet, herunder kjøp, renovering og drift av eiendomsprosjekter innenfor sosial bolig i Storbritannia. Nærmere informasjon om selskapets kapitalanvendelse fremgår av årsrapport og informasjonsmemorandum.</div></div>
                 </div>
             </div>
             <div class="faq-cta">
@@ -10691,16 +10745,16 @@
         </div>
     </section>
 
-    <!-- ═══ CTA ═══ -->
+    <!-- AVVIK 1: CTA-seksjon endret — Bli investor-knapp fjernet. -->
     <section class="how-it-works" style="padding:5rem 4rem;">
         <div class="how-inner" style="text-align:center;">
             <div class="how-header reveal" style="margin-bottom:2.5rem;">
-                <div class="intro-label">Klar til å investere?</div>
+                <div class="intro-label">Vil du vite mer?</div>
                 <h2>Ta neste steg</h2>
             </div>
             <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;" class="reveal">
-                <a href="#" data-page="bliinvestor" class="btn-primary">
-                    Bli investor
+                <a href="#" data-page="kontakt" onclick="showPage('kontakt'); return false;" class="btn-primary">
+                    Kontakt oss
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                 </a>
                 <a href="#" data-page="rapporter" class="btn-ghost">
@@ -11223,6 +11277,7 @@ window.addEventListener('resize',drawHist);
             </div>
 
             <div class="om-structure-grid">
+                <!-- AVVIK 2 & 3: Original kort nedenfor. Ny tekst uten pant-/selskapsgaranti-påstander.
                 <div class="om-struct-card reveal">
                     <div class="om-struct-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -11230,12 +11285,29 @@ window.addEventListener('resize',drawHist);
                     <h3>Pant i aksjer</h3>
                     <p>Som investor har du pant i aksjene i Vitae Investments Norge. I tillegg foreligger det en selskapsgaranti mellom det britiske og det norske selskapet, som sikrer dine rettigheter i hele strukturen. Alle investorer har identisk panterett — uten forfordeling eller særavtaler.</p>
                 </div>
+                -->
+                <div class="om-struct-card reveal">
+                    <div class="om-struct-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Likebehandling av investorer</h3>
+                    <p>Alle obligasjonseiere behandles på like vilkår i henhold til obligasjonsvilkårene. Vi legger vekt på transparens og forutsigbarhet i hele investeringsperioden.</p>
+                </div>
+                <!-- AVVIK 4: Original kort nedenfor. Ny tekst uten "aldri til drift"-påstand.
                 <div class="om-struct-card reveal">
                     <div class="om-struct-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                     </div>
                     <h3>Ansvarlig kapitalforvaltning</h3>
                     <p>All investert kapital benyttes utelukkende til nye prosjekter, og inngår aldri som dekning av løpende kostnader eller utbetalinger til eksisterende investorer. Vår strategi baserer seg på at prosjekter skal ha betydelig verdiøkning i løpet av de første 24 månedene.</p>
+                </div>
+                -->
+                <div class="om-struct-card reveal">
+                    <div class="om-struct-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Langsiktig kapitalforvaltning</h3>
+                    <p>Vår strategi baserer seg på at prosjektene skal utvikle seg positivt i verdi over tid. Nærmere informasjon om kapitalanvendelse fremgår av årsrapport og informasjonsmemorandum.</p>
                 </div>
                 <div class="om-struct-card reveal">
                     <div class="om-struct-icon">
@@ -11259,8 +11331,12 @@ window.addEventListener('resize',drawHist);
     <section class="om-compliance">
         <div class="om-compliance-inner reveal">
             <div class="intro-label">Eierskap og compliance</div>
-            <h2>Grundig vurdert og revisjonspliktig</h2>
+            <h2>Revisjonspliktig virksomhet</h2>
+            <!-- AVVIK 3 & 8: Original tekst nedenfor. Ny tekst uten pant-påstand og udatert PwC-referanse.
             <p>Gjennom pant i selskapets aksjer har investorene prioritet foran aksjonærene — en ordning som understreker vår forpliktelse til investorenes sikkerhet. Vitae Investments er revisjonspliktige, og vår forretningsmodell er grundig vurdert av Advokatfirmaet PwC med tanke på compliance og konsesjonsplikt.</p>
+            -->
+            <p>Vitae Investments er revisjonspliktig og avlegger årsregnskap i tråd med gjeldende regnskapsregler. Vi legger vekt på åpenhet, og relevant dokumentasjon om selskapets struktur og virksomhet gjøres tilgjengelig for investorer på forespørsel.</p>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-top:1rem;font-style:italic;">Investering i eiendomsobligasjoner innebærer risiko, og investeringen er ikke omfattet av innskuddsgarantien (Bankenes Sikringsfond).</p>
             <div class="om-compliance-badges">
                 <div class="om-badge">
                     <div class="om-badge-icon">
@@ -11268,17 +11344,27 @@ window.addEventListener('resize',drawHist);
                     </div>
                     <span class="om-badge-label">Revisjonspliktig</span>
                 </div>
+                <!-- AVVIK 8: PwC-badge fjernet.
                 <div class="om-badge">
                     <div class="om-badge-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
                     <span class="om-badge-label">PwC-vurdert</span>
                 </div>
+                -->
+                <!-- AVVIK 3: Investorpant-badge fjernet.
                 <div class="om-badge">
                     <div class="om-badge-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     </div>
                     <span class="om-badge-label">Investorpant</span>
+                </div>
+                -->
+                <div class="om-badge">
+                    <div class="om-badge-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <span class="om-badge-label">Dual selskapsstruktur</span>
                 </div>
             </div>
         </div>
@@ -11305,11 +11391,14 @@ window.addEventListener('resize',drawHist);
 
 </div>
 
+<!-- AVVIK 1: Hele Impact Partner-siden er deaktivert. Innholdet er bevart inne i <template>-taggen nedenfor.
+     For å reaktivere: fjern <template>-åpningen under og </template>-lukkingen rett før <!-- BLI INVESTOR PAGE -->. -->
+<template id="pageImpactDisabled">
 <div class="page-impact" id="pageImpact">
 
 
-    <!-- ═══ NAV ═══ -->
-    
+    <!-- NAV -->
+
 
     <!-- ═══ HERO ═══ -->
     <section class="ip-hero">
@@ -11556,6 +11645,8 @@ window.addEventListener('resize',drawHist);
 
 
 </div>
+</template>
+<!-- END AVVIK 1: Impact Partner-siden slutter her. -->
 
 <div class="page-rapporter" id="pageRapporter">
 
@@ -11818,7 +11909,9 @@ window.addEventListener('resize',drawHist);
 
 </div>
 
-<!-- ═══ BLI INVESTOR PAGE ═══ -->
+<!-- AVVIK 1: Hele Bli Investor-siden er deaktivert. Innholdet er bevart inne i <template>-taggen nedenfor.
+     For å reaktivere: fjern <template>-åpningen under og </template>-lukkingen rett før <!-- KONTAKT OSS PAGE -->. -->
+<template id="pageBliInvestorDisabled">
 <div class="page-bliinvestor" id="pageBliInvestor">
 
     <!-- ═══ HERO ═══ -->
@@ -11873,8 +11966,25 @@ window.addEventListener('resize',drawHist);
         </div>
     </section>
 
-    <!-- ═══ SØKNADSSKJEMA ═══ -->
+    <!-- AVVIK 1: Erstatning for søknadsskjema — enkel CTA istedenfor. -->
     <section class="bi-form-section" id="bi-soknad">
+        <div class="bi-form-inner">
+            <div class="intro-label reveal">Neste steg</div>
+            <h2 class="reveal">Ta <em>kontakt</em> med oss</h2>
+            <p class="bi-form-sub reveal" style="max-width:640px;margin:1rem auto 2rem;">Ønsker du å investere eller lære mer om obligasjonene våre? Send oss en henvendelse, så tar vi kontakt for en uforpliktende samtale om videre prosess og full dokumentasjon.</p>
+            <div style="text-align:center;margin-top:1.5rem;">
+                <a href="#" data-page="kontakt" onclick="showPage('kontakt'); return false;" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 1.8rem;">
+                    Gå til kontaktskjema
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </a>
+            </div>
+            <p class="bi-form-sub reveal" style="max-width:640px;margin:2.5rem auto 0;font-size:0.85rem;font-style:italic;color:var(--text-muted);">Investering i eiendomsobligasjoner innebærer risiko, og hele eller deler av investert beløp kan gå tapt. Investeringen er ikke omfattet av innskuddsgarantien (Bankenes Sikringsfond). Fullstendige vilkår fremgår av obligasjonsavtalen og informasjonsmemorandum.</p>
+        </div>
+    </section>
+
+    <!-- AVVIK 1: Original søknadsskjema er deaktivert. Bevart inne i <template>-taggen nedenfor. Reaktiveres ved å fjerne <template>-taggene. -->
+    <template id="soknadsskjemaDisabled">
+    <section class="bi-form-section" id="bi-soknad-original">
         <div class="bi-form-inner">
             <div class="intro-label reveal">Søknadsskjema</div>
             <h2 class="reveal">Start din <em>investering</em></h2>
@@ -11981,6 +12091,8 @@ window.addEventListener('resize',drawHist);
             </div>
         </div>
     </section>
+    </template>
+    <!-- END AVVIK 1: Original søknadsskjema slutter her. -->
 
     <!-- ═══ HJELP CTA ═══ -->
     <section class="bi-help">
@@ -12010,6 +12122,8 @@ window.addEventListener('resize',drawHist);
     </script>
 
 </div>
+</template>
+<!-- END AVVIK 1: Bli Investor-siden slutter her. -->
 
 <!-- ═══ KONTAKT OSS PAGE ═══ -->
 <div class="page-kontakt" id="pageKontakt">
@@ -12258,7 +12372,9 @@ window.addEventListener('resize',drawHist);
                         <option value="Generelt sp&oslash;rsm&aring;l om investering">Generelt sp&oslash;rsm&aring;l om investering</option>
                         <option value="&Oslash;nsker &aring; bli investor">&Oslash;nsker &aring; bli investor</option>
                         <option value="Sp&oslash;rsm&aring;l om selskapet">Sp&oslash;rsm&aring;l om selskapet</option>
+                        <!-- AVVIK 1: Impact Partner-alternativ skjult.
                         <option value="Impact Partner-programmet">Impact Partner-programmet</option>
+                        -->
                         <option value="Annet">Annet</option>
                     </select>
                 </div>
@@ -12315,10 +12431,13 @@ window.addEventListener('resize',drawHist);
 
             <div class="ko-faq-item reveal">
                 <div class="ko-faq-q" onclick="this.parentElement.classList.toggle('open')">
-                    Er investeringen min sikret?
+                    Hvordan er investeringen strukturert?
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                 </div>
+                <!-- AVVIK 2, 3 & 8: Original tekst nedenfor. Ny tekst uten pant-/selskapsgaranti-/PwC-påstander.
                 <div class="ko-faq-a"><p>Ja. Alle investorer har pant i aksjene i Vitae Investments Norge AS, og det foreligger en selskapsgaranti mellom det norske og britiske selskapet. V&aring;r modell er ogs&aring; vurdert av Advokatfirmaet PwC.</p></div>
+                -->
+                <div class="ko-faq-a"><p>Investeringen er organisert som obligasjoner utstedt av Vitae Investments Norge AS. Fullstendige vilk&aring;r fremg&aring;r av obligasjonsavtalen og informasjonsmemorandum, som utleveres i forbindelse med tegning. Vi presiserer at investeringen ikke er omfattet av innskuddsgarantien (Bankenes Sikringsfond), og at investering i eiendomsobligasjoner innebærer risiko.</p></div>
             </div>
         </div>
     </section>
@@ -12329,8 +12448,9 @@ window.addEventListener('resize',drawHist);
             <div class="intro-label">Ta det f&oslash;rste steget</div>
             <h2>Klar for &aring; h&oslash;re <em>mer?</em></h2>
             <p>Vi setter gjerne av tid til en uforpliktende samtale der vi g&aring;r gjennom hvordan Vitae Investments fungerer &mdash; og svarer p&aring; alle sp&oslash;rsm&aring;l du m&aring;tte ha.</p>
-            <a href="#" data-page="bliinvestor" class="ko-cta-btn">
-                <span>Bli investor</span>
+            <!-- AVVIK 1: Bli investor-knapp fjernet — brukeren er allerede på kontaktsiden. -->
+            <a href="#kontaktskjema" class="ko-cta-btn">
+                <span>Send oss en henvendelse</span>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
             </a>
             <div class="ko-socials">
@@ -12456,7 +12576,10 @@ window.addEventListener('resize',drawHist);
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
+                    <!-- AVVIK 7: Original tekst nedenfor. Ny tekst uten "garantert rente"-formulering.
                     <blockquote>Den garanterte renten gjorde at jeg turte &aring; satse. Utbetalingene hver m&aring;ned gir meg en kj&aelig;rkommen ekstra inntekt, og investeringene i bolig for hjeml&oslash;se er etter mitt hjerte.</blockquote>
+                    -->
+                    <blockquote>Den forutsigbare avkastningen gjorde at jeg turte &aring; satse. Utbetalingene hver m&aring;ned gir meg en kj&aelig;rkommen ekstra inntekt, og investeringene i bolig for hjeml&oslash;se er etter mitt hjerte.</blockquote>
                     <div class="er-card-author">
                         <div class="er-card-avatar"><img src="Åse.png" alt="&Aring;se H."></div>
                         <div>
@@ -12641,11 +12764,12 @@ window.addEventListener('resize',drawHist);
     <!-- ═══ CTA ═══ -->
     <section class="er-cta">
         <div class="er-cta-inner reveal">
-            <div class="intro-label">Bli med</div>
-            <h2>Klar til &aring; bli en av <em>v&aring;re investorer?</em></h2>
-            <p>Bli med i et fellesskap av investorer som f&aring;r god avkastning &mdash; og gj&oslash;r en forskjell. Start din reise med Vitae Investments i dag.</p>
-            <a href="#" data-page="bliinvestor" class="er-cta-btn">
-                <span>Bli investor</span>
+            <!-- AVVIK 1: CTA endret fra "Bli investor" til "Kontakt oss". -->
+            <div class="intro-label">Kom i kontakt</div>
+            <h2>Vil du vite <em>mer om oss?</em></h2>
+            <p>Ta kontakt for en uforpliktende samtale &mdash; vi svarer gjerne p&aring; sp&oslash;rsm&aring;l om selskapet og v&aring;r modell.</p>
+            <a href="#" data-page="kontakt" onclick="showPage('kontakt'); return false;" class="er-cta-btn">
+                <span>Kontakt oss</span>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
             </a>
         </div>
@@ -12955,7 +13079,10 @@ window.addEventListener('resize',drawHist);
         <div class="footer-inner">
             <div class="footer-brand">
                 <div class="footer-logo"><img src="vitae-logo.jpg" alt="Vitae Investments">VITAE <span>·</span> INVESTMENTS</div>
+                <!-- AVVIK 1: Original tekst nedenfor. Ny tekst uten aktiv rente-lokking.
                 <p>Eiendomsobligasjoner med 8–10% fast rente for deg som ønsker bedre avkastning på pengene dine.</p>
+                -->
+                <p>Vitae Investments eier og utvikler boliger for vanskeligstilte i Storbritannia.</p>
                 <div style="margin-top:1.2rem;font-size:0.78rem;line-height:1.8;">
                     <a href="mailto:aksel@vitaeinvestments.no" style="color:rgba(255,255,255,0.5);text-decoration:none;">aksel@vitaeinvestments.no</a><br>
                     <span style="color:rgba(255,255,255,0.35);">+47 911 92 082</span>
@@ -12966,8 +13093,12 @@ window.addEventListener('resize',drawHist);
                 <a href="#" data-page="home">Hjem</a>
                 <a href="#" data-page="utforsk">Utforsk</a>
                 <a href="#" data-page="omoss">Om Vitae Investments</a>
+                <!-- AVVIK 1: Impact Partner-lenke skjult. Reaktiveres ved å fjerne kommentar-taggene.
                 <a href="#" data-page="impact">Impact Partner</a>
+                -->
+                <!-- AVVIK 1: Bli Investor-lenke skjult. Reaktiveres ved å fjerne kommentar-taggene.
                 <a href="#" data-page="bliinvestor">Bli Investor</a>
+                -->
                 <a href="#" data-page="kontakt">Kontakt oss</a>
             </div>
             <div class="footer-col">
@@ -13285,7 +13416,8 @@ window.addEventListener('resize',drawHist);
             </div>
             <button class="portal-btn">Logg inn</button>
             <div class="portal-divider"><span>eller</span></div>
-            <div class="portal-footer">Ikke investor ennå? <a href="#" data-page="bliinvestor">Bli investor</a></div>
+            <!-- AVVIK 1: "Bli investor"-lenke fjernet fra portal-modal. -->
+            <div class="portal-footer">Ikke investor enn&aring;? <a href="#" data-page="kontakt" onclick="showPage('kontakt'); document.getElementById('portalOverlay').classList.remove('active'); return false;">Ta kontakt</a></div>
             <div class="portal-secure">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                 Sikker tilkobling · 256-bit kryptering
